@@ -3,7 +3,7 @@ import git
 import os
 
 # To initiate new Git repo in the mentioned directory
-os.chdir('/home/kdemir/Documents/py')
+os.chdir('/home/kdemir/Documents/Github/sec_test_atlas')
 print("Current working directory: {0}".format(os.getcwd()))
 
 #import pdb; pdb.set_trace();
