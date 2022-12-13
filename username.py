@@ -20,7 +20,7 @@ while True:
     os.system('git add test.py')
     os.system('git config  user.name ' +  '"'+  line + '"'  )
     os.system('git config  user.email ' +  '"'+  line + '"'  )
-    os.system('git commit -m "comm" --author ' + '\"'+line + '\"' +" " + '\"'+  line + '\"')
+#    os.system('git commit -m "comm" --author ' + '\"'+line + '\"' +" " + '\"'+  line + '\"')
     os.system('git push')
     
 # Close the pointer to that file
