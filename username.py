@@ -1,7 +1,7 @@
 import os
 
 # To initiate new Git repo in the mentioned directory
-os.chdir('/home/kdemir/Documents/py')
+os.chdir('/home/kdemir/Documents/Github/sec_test_atlas')
 
 #import pdb; pdb.set_trace();
 # Define the name of the file to read from
