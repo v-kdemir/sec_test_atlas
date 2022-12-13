@@ -17,11 +17,12 @@ while True:
     if not line:
         break
     print( line)
-    os.system('git checkout main')
-    os.system('git config  user.name ' +  '"'+  line + '"'  )
+    with open(pyfile, "a+") as f:
+        f.write("a")
     os.system('git add test.py')
-    os.system('git commit -m "kk" --author '  + '\"'+line + '"' +'\"' )
+    os.system('git commit -m "user comm" --author=' + '"' + line +'/'+ '"')
     os.system('git push')
+    f.close()
 
 # Close the pointer to that file
 filehandle.close()
