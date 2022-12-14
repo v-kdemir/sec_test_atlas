@@ -10,7 +10,7 @@ pyfile = "test.py"
 filehandle = open(filename, 'r+')
 while True:
     lines = filehandle.readlines()
-    count=1
+    count=1111
     if not lines:
         break
 #    import pdb; pdb.set_trace();
