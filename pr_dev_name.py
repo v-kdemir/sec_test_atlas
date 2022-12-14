@@ -10,13 +10,13 @@ pyfile = "test.py"
 filehandle = open(filename, 'r+')
 while True:
     lines = filehandle.readlines()
-    count=1
+    count=1100
     if not lines:
         break
 #    import pdb; pdb.set_trace();
     for line in lines:
         count+=1
-        os.system('git auth login --with-token < token.txt')
+#        os.system('git auth login --with-token < token.txt')
         os.system('git fetch --all')
         os.system('git checkout ' + str(count))
         os.system('git pull')
