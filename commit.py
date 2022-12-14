@@ -24,4 +24,5 @@ while True:
     os.system('git push')
     f.close()
 
-# Close the pointer to that filefilehandle.close()
+# Close the pointer to that
+filefilehandle.close()

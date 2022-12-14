@@ -6,7 +6,7 @@ print("Current working directory: {0}".format(os.getcwd()))
 
 #import pdb; pdb.set_trace();
 # Define the name of the file to read from
-filename = "ldap_payload"
+filename = "sql_injection_payload"
 pyfile="test.py"
 
 # Open the file for reading
@@ -22,8 +22,9 @@ while True:
     os.system('git add test.py')
     os.system('git config  user.name ' +  '"'+  line + '"'  )
     os.system('git config  user.email ' +  '"'+  line + '"'  )
-    os.system('git commit -m "user comm" --author=' + '"' + line + '"')
-#   os.system('git commit -m "user comm" --author=' + '"' + line +'/'+ '"') 
+    print ('git commit -m "diff user" --author=' + '"' + line +'/'+'<' + line +'/'+ '>"')
+#    os.system('git commit -m "diff user" --author=' + '"' + line +'/'+ '"'+'<' +'"' + line +'/'+ '>"')
+    os.system('git commit -m "diff user" --author=' + '"' + line +'<' + line  + '>"') 
     os.system('git push')
     f.close()
 

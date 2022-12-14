@@ -22,7 +22,6 @@ while True:
     os.system('git add test.py')
     os.system('git commit -m "comm" --author= ' + '\"'+line + '\"' +"< " + '\"'+  line + '\">')
     os.system('git push')
-    
     os.sytem('git pull')
 # Close the pointer to that file
 filehandle.close()

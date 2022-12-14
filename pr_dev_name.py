@@ -10,7 +10,7 @@ pyfile = "test.py"
 filehandle = open(filename, 'r+')
 while True:
     lines = filehandle.readlines()
-    count=1
+    count=900
     if not lines:
         break
 #    import pdb; pdb.set_trace();
@@ -22,9 +22,11 @@ while True:
         with open(pyfile, "a+") as f:
             f.write("a")
         os.system('git add test.py')
-        os.system('git commit -m' +"'" +line +"/" +"'")
+        os.system('git config  user.name ' +  '"'+  line + '"'  )
+        os.system('git config  user.email ' +  '"'+  line + '"'  )
+        os.system('git commit -m "diff user"')
         os.system('git push --set-upstream origin ' + str(count))
-        print('gh pr create -B main -H  ' + str(count) + ' --title ' + '\"'+line + '\"' +" " +' --body '+ '\"'+  line + '\"')
-        os.system('gh pr create -B main -H  ' + str(count) + ' --title ' + '\"'+line +'\"' +" "+' --body '+ '\"'+  line + '\"' )
+        print('gh pr create -B main -H  ' + str(count) + ' --title diff --body body ')
+        os.system('gh pr create -B main -H  ' + str(count) + ' --title diff --body body' )
 f.close()
 filehandle.close()
