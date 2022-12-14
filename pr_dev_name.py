@@ -16,14 +16,15 @@ while True:
 #    import pdb; pdb.set_trace();
     for line in lines:
         count+=1
+        os.system('git auth login --with-token < token.txt')
         os.system('git fetch --all')
         os.system('git checkout ' + str(count))
         os.system('git pull')
         with open(pyfile, "a+") as f:
             f.write("a")
         os.system('git add test.py')
-        os.system('git config  user.name ' +  '"'+  line + '"'  )
-        os.system('git config  user.email ' +  '"'+  line + '"'  )
+        os.system('git config  --replace-all user.name ' +  '"'+  line + '"'  )
+        os.system('git config  --replace-all user.email ' +  '"'+  line + '"'  )
         os.system('git commit -m "diff user"')
         os.system('git push --set-upstream origin ' + str(count))
         print('gh pr create -B main -H  ' + str(count) + ' --title diff --body body ')
