@@ -20,7 +20,10 @@ while True:
     with open(pyfile, "a+") as f:
         f.write("a")
     os.system('git add test.py')
-    os.system('git commit -m "user comm" --author=' + '"' + line +'/'+ '"')
+    os.system('git config  user.name ' +  '"'+  line + '"'  )
+    os.system('git config  user.email ' +  '"'+  line + '"'  )
+    os.system('git commit -m "user comm" --author=' + '"' + line + '"')
+#   os.system('git commit -m "user comm" --author=' + '"' + line +'/'+ '"') 
     os.system('git push')
     f.close()
 

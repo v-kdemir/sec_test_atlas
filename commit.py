@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-import git
 import os
 
 # To initiate new Git repo in the mentioned directory
@@ -26,5 +24,4 @@ while True:
     os.system('git push')
     f.close()
 
-# Close the pointer to that file
-filehandle.close()
+# Close the pointer to that filefilehandle.close()
