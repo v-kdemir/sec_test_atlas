@@ -23,8 +23,10 @@ while True:
         with open(pyfile, "a+") as f:
             f.write("a")
         os.system('git add test.py')
-        os.system('git config  --replace-all user.name ' +  '"'+  line + '"'  )
-        os.system('git config  --replace-all user.email ' +  '"'+  line + '"'  )
+        os.system('git config  --global --replace-all  user.name ' +  '"'+  line + '"'  )
+        os.system('git config --global --replace-all  user.email ' +  '"'+  line + '"'  )
+        print('it config user.name')
+        print('it config user.email')
         os.system('git commit -m "diff user"')
         os.system('git push --set-upstream origin ' + str(count))
         print('gh pr create -B main -H  ' + str(count) + ' --title diff --body body ')
